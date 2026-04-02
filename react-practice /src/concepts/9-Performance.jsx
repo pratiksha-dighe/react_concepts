@@ -20,7 +20,7 @@ function Performance() {
   const expensiveComputation = useMemo(() => {
     console.log('Computing expensive value...')
     let result = 0
-    for (let i = 0; i < 1000000000; i++) {
+    for (let i = 0; i < 10_000_000; i++) {
       result += i
     }
     return result

@@ -11,6 +11,10 @@
     min-height: 100vh;
     color: #333;
   }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
   
   .container {
     max-width: 1200px;
@@ -77,6 +81,285 @@
     margin-top: 20px;
     margin-bottom: 15px;
     color: var(--secondary);
+  }
+
+  .toolbar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+
+  .pill {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    padding: 8px 12px;
+    border-radius: 999px;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .inline-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .mini-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  @media (max-width: 800px) {
+    .mini-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .mini-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 12px;
+  }
+
+  .muted {
+    color: #6b7280;
+    font-size: 12px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+  }
+
+  /* TaskFlow mini project */
+  .tf-shell {
+    background: #ffffff;
+    border: 1px solid rgba(229, 231, 235, 0.8);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  }
+
+  .tf-topbar {
+    padding: 14px;
+    border-bottom: 1px solid #e5e7eb;
+    background: linear-gradient(135deg, rgba(102,126,234,0.10) 0%, rgba(118,75,162,0.10) 100%);
+  }
+
+  .tf-add {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  .tf-add input {
+    flex: 1;
+    min-width: 240px;
+    margin: 0;
+  }
+
+  .tf-filters {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr 0.9fr 0.9fr 0.9fr auto;
+    gap: 10px;
+    align-items: center;
+  }
+
+  @media (max-width: 980px) {
+    .tf-filters {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .tf-filters input,
+  .tf-filters select {
+    margin: 0;
+  }
+
+  .tf-board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    padding: 14px;
+    background: #fafafa;
+  }
+
+  @media (max-width: 980px) {
+    .tf-board {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .tf-col {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .tf-colHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    background: #ffffff;
+  }
+
+  .tf-colTitle {
+    font-weight: 800;
+    color: #111827;
+  }
+
+  .tf-count {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .tf-colBody {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 140px;
+  }
+
+  .tf-empty {
+    color: #6b7280;
+    font-size: 13px;
+    padding: 12px;
+    border: 1px dashed #e5e7eb;
+    border-radius: 10px;
+    background: #fafafa;
+  }
+
+  .tf-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  }
+
+  .tf-cardTop {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tf-titleRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .tf-title {
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.25;
+  }
+
+  .tf-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tf-tag {
+    font-size: 12px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+
+  .tf-priority {
+    font-size: 12px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .tf-priority--low {
+    background: rgba(16, 185, 129, 0.12);
+    border-color: rgba(16, 185, 129, 0.25);
+    color: rgb(6, 95, 70);
+  }
+
+  .tf-priority--med {
+    background: rgba(102, 126, 234, 0.12);
+    border-color: rgba(102, 126, 234, 0.25);
+    color: rgb(55, 48, 163);
+  }
+
+  .tf-priority--high {
+    background: rgba(239, 68, 68, 0.10);
+    border-color: rgba(239, 68, 68, 0.22);
+    color: rgb(153, 27, 27);
+  }
+
+  .tf-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .tf-move {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .tf-move button {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .tf-cta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .tf-cta button {
+    padding: 8px 10px;
+    font-size: 12px;
   }
   
   button {

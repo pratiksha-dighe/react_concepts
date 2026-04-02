@@ -8,6 +8,7 @@ import APIIntegration from './concepts/6-APIIntegration'
 import CustomHooks from './concepts/7-CustomHooks'
 import ContextAPI from './concepts/8-ContextAPI'
 import Performance from './concepts/9-Performance'
+import TaskFlow from './mini-project/TaskFlow'
 import './App.css'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
     hooks: { label: 'Custom Hooks', component: CustomHooks },
     context: { label: 'Context API', component: ContextAPI },
     performance: { label: 'Performance', component: Performance },
+    project: { label: 'Mini Project', component: TaskFlow },
   }
 
   const CurrentComponent = sections[activeSection].component
